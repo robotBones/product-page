@@ -149,3 +149,21 @@ header {
   position: relative;
   top: calc(50% - 9px);
 }
+
+.product {
+  float: left;
+}
+
+.selection {
+  margin-top: 40px;
+}
+
+.js-product-thumbnail {
+  padding: 5px;
+  width: 80px;
+  border: 3px solid white;
+}
+
+.js-product-thumbnail.js-selected {
+  border: 3px solid black;
+}

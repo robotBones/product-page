@@ -1,3 +1,4 @@
+(function() {
 // accordion logic
 var accordion = document.getElementsByClassName("accordion");
 for (var i = 0; i < accordion.length; i++) {
@@ -17,11 +18,11 @@ for (var i = 0; i < accordion.length; i++) {
   }
 }
 
+const modal = document.getElementsByClassName("js-modal")[0];
+const modalMessage = document.getElementsByClassName("js-modal-message")[0];
 function message(msg) {
-  const modal = document.getElementsByClassName("js-modal")[0];
-  const message = document.getElementsByClassName("js-modal-message")[0];
   modal.classList.remove('js-hidden');
-  message.innerText = msg;
+  modalMessage.innerText = msg;
 
   setTimeout(function() {
     modal.classList.add('js-hidden');
@@ -29,11 +30,28 @@ function message(msg) {
 }
 
 // form logic
-var form = document.getElementsByClassName("cta-cart")[0];
+const form = document.getElementsByClassName('cta-cart')[0];
+const quantity = document.getElementsByClassName('quantity')[0]
 form.onsubmit = function(event) {
   event.preventDefault();
-  const quantity = document.getElementsByClassName("quantity")[0].value
-  const msg = "You've added " + quantity + " apron(s)!";
+  const msg = "You've added " + quantity.value + " apron(s)!";
   message(msg);
 }
 
+
+const selection = document.getElementsByClassName('selection')[0];
+const hero = document.getElementsByClassName('js-product-hero')[0];
+selection.addEventListener('click', function(event) {
+  const product = event.target;
+  if (product.className.split(' ').indexOf('js-product-thumbnail') !== -1) {
+    // remove selection outline on thumbnails
+    Array.prototype.forEach.call(this.children, function(img) {
+      img.classList.remove('js-selected');
+    });
+    // add selection outline
+    product.classList.add('js-selected');
+    hero.src = product.src;
+  }
+});
+
+})();
