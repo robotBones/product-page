@@ -41,13 +41,14 @@ form.onsubmit = function(event) {
 
 const selection = document.getElementsByClassName('selection')[0];
 const hero = document.getElementsByClassName('js-product-hero')[0];
+let selected = document.getElementsByClassName('js-selected')[0]
 selection.addEventListener('click', function(event) {
   const product = event.target;
   if (product.className.split(' ').indexOf('js-product-thumbnail') !== -1) {
-    // remove selection outline on thumbnails
-    Array.prototype.forEach.call(this.children, function(img) {
-      img.classList.remove('js-selected');
-    });
+    // remove selection outline on previously selected thumbnail
+    selected.classList.remove('js-selected');
+    // cache new selected item
+    selected = product;
     // add selection outline
     product.classList.add('js-selected');
     hero.src = product.src;
