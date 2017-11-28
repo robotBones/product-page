@@ -1,3 +1,9 @@
+html {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5em;
+}
+
 body {
   background-color: #fff;
   font-family: Helvetica, Arial, Sans-serif;
@@ -7,6 +13,17 @@ body {
 
 header {
   margin: 1em 0;
+  overflow: hidden;
+}
+
+#content {
+  margin: 1em 0 5em 0;
+  height: 700px;
+}
+
+.title {
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 1.5em;
 }
 
 .brand {
@@ -22,7 +39,7 @@ header {
   display: flex;
   justify-content: center;
   white-space: nowrap;
-  margin: 1em 0;
+  margin: 1em 0 0 0;
   cursor: pointer;
 }
 
@@ -35,13 +52,39 @@ header {
   font-size: 11px;
   text-transform: uppercase;
   background-color: #444;
-  padding: 1em;
+  padding: 0.5em 1em;
   color: #eee;
 }
 
 .nav-item:hover {
   background-color: #eee;
   color: #444;
+}
+
+.bread-crumbs {
+  margin: 0;
+  padding: 0;
+  color: #c0c0c0;
+  font-size: 12px;
+}
+
+.crumb {
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+}
+
+.crumb::after {
+  content: '>';
+  padding: 0 0.5em;
+}
+
+.current-crumb {
+  color: #444;
+}
+
+.current-crumb::after {
+  content: '';
 }
 
 .product {
@@ -57,19 +100,23 @@ header {
   color: #444;
 }
 
-.price {
-  font-size: 18px;
+.description-title {
+  margin-top: 0;
 }
 
 .cta-cart * {
   display: block;
-  margin: 1em;
+  margin: 1rem;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
 }
 
 .quantity {
-  padding: 8px 5px;
+  padding: 0.6em;
   width: 50px;
-  font-size: 14px;
   text-align: center;
 }
 
@@ -77,9 +124,10 @@ header {
   background-color: red;
   border: 1px solid red;
   border-radius: 0;
-  padding: 1em;
-  font-size: 14px;
-  color: white
+  padding: 0.8em;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
 }
 
 .accordion {
@@ -92,8 +140,6 @@ header {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 16px;
-  /* transition: 0.4s; */
 }
 
 .accordion.js-active,
@@ -162,8 +208,39 @@ header {
   padding: 5px;
   width: 80px;
   border: 3px solid white;
+  clear: both;
 }
 
 .js-product-thumbnail.js-selected {
   border: 3px solid black;
+}
+
+footer {
+  clear: both;
+  padding: 0.5em 0;
+  border-top: 1px solid #444;
+  background-color: #eee;
+
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  margin: 1em 0 0 0;
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-item {
+  display: inline;
+  list-style: none;
+  cursor: pointer;
+  padding: 0 1em;
+  border-right: 1px solid #444;
+}
+
+.footer-item:last-child {
+  border-right: none;
+
 }

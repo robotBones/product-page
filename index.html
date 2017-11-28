@@ -25,7 +25,15 @@
       <a class='nav-item'>williams-sonoma home</a>
     </nav>
   </header>
-  <div class='bread-crumbs'></div>
+  <div class='bread-crumbs-container'>
+    <ul class='bread-crumbs'>
+      <li class='crumb'><a>Home</a></li>
+      <li class='crumb'><a>Homekeeping</a></li>
+      <li class='crumb'><a>Aprons</a></li>
+      <li class='crumb'><a>Adult Aprons</a></li>
+      <li class='crumb current-crumb'><a>Williams-Sonoma Classic Apron, French Blue</a></li>
+    </ul>
+  </div>
   <div id='content'>
     <div class='product'>
       <div class='hero'>
@@ -39,7 +47,7 @@
       </div>
     </div>
     <div class='product-details'>
-      <h3 class='description-title'>Williams-Sonoma Classic Apron, French Blue</h3>
+      <h2 class='description-title title'>Williams-Sonoma Classic Apron, French Blue</h2>
       <p class='description'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Duis convallis nec ex at auctor. Cras magna quam, varius
@@ -57,27 +65,36 @@
       <form class='cta-cart' action='#' method='post'>
         <div class='price'>$19.95</div>
         <input class='quantity' name='quantity' type='number' value='1' min='1'>
-        <input class='add-btn' type='submit' value='Add to cart'>
+        <input class='add-btn' type='submit' value='Add to cart  &#x25BA;'>
       </form>
       <div class='details-accordion'>
         <i class='caret js-collapsed'></i>
-        <button class="accordion">Section 1</button>
+        <button class="accordion title">Section 1</button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <i class='caret js-collapsed'></i>
-        <button class="accordion">Section 2</button>
+        <button class="accordion title">Section 2</button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <i class='caret js-collapsed'></i>
-        <button class="accordion">Section 3</button>
+        <button class="accordion title">Section 3</button>
         <div class="panel">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-      </div>
+      </div> <!-- accordion -->
     </div> <!-- product details -->
   </div> <!-- content -->
+
+  <footer>
+    <ul class='footer-list'>
+      <li class='footer-item'>&#x24B8; 2016 Williams-Sonoma Inc., All Rights Reserved</li>
+      <li class='footer-item'><a>Terms and Conditions<span>Updated March 2016</span></a></li>
+      <li class='footer-item'><a>Privacy Policy</a></li>
+      <li class='footer-item'><a>Legal Statement</a></li>
+    </ul>
+  </footer>
 
 
   <script type='text/javascript' src='./main.js'></script>
