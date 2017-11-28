@@ -6,38 +6,71 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class='brand'></div>
-  <nav></nav>
+  <div class='modal js-modal js-hidden'>
+    <span class='js-modal-message'></span>
+  </div>
+  <header>
+    <div class='brand'></div>
+    <nav class='nav-items'>
+      <a class='nav-item'>cookware</a>
+      <a class='nav-item'>cooks' tools</a>
+      <a class='nav-item'>cutlery</a>
+      <a class='nav-item'>electrics</a>
+      <a class='nav-item'>bakeware</a>
+      <a class='nav-item'>food</a>
+      <a class='nav-item'>tabletop & bar</a>
+      <a class='nav-item'>homekeeping</a>
+      <a class='nav-item'>outdoor</a>
+      <a class='nav-item'>sale</a>
+      <a class='nav-item'>williams-sonoma home</a>
+    </nav>
+  </header>
   <div class='bread-crumbs'></div>
-  <div class='product'>
-    <div class='hero'></div>
-    <div class='selection'></div>
-  </div>
-  <div class='details'>
-    <div class='description'></div>
-    <form class='cta-cart' action='#' method='post'>
-      <span class='price'></span>
-      <input class='quantity' name='quantity' type="number" value="1">
-      <input type'submit' value='Add to cart'>
-    </form>
-    <div class='details-accordion'>
-      <button class="accordion">Section 1</button>
-      <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-
-      <button class="accordion">Section 2</button>
-      <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-
-      <button class="accordion">Section 3</button>
-      <div class="panel">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+  <div id='content'>
+    <div class='product'>
+      <div class='hero'></div>
+      <div class='selection'></div>
     </div>
-
-  </div>
+    <div class='product-details'>
+      <h3 class='description-title'>Williams-Sonoma Classic Apron, French Blue</h3>
+      <p class='description'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis convallis nec ex at auctor. Cras magna quam, varius
+        eget faucibus quis, interdum et elit. Vivamus ac ultricies
+        quam, sed fringilla nunc. Aliquam maximus nibh eu sem
+        facilisis placerat. Nam tristique turpis et elementum
+        euismod. Vestibulum eget finibus dolor. Ut eu nunc elit.
+      </p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+      </ul>
+      <form class='cta-cart' action='#' method='post'>
+        <div class='price'>$19.95</div>
+        <input class='quantity' name='quantity' type='number' value='1' min='1'>
+        <input class='add-btn' type='submit' value='Add to cart'>
+      </form>
+      <div class='details-accordion'>
+        <i class='caret js-collapsed'></i>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <i class='caret js-collapsed'></i>
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <i class='caret js-collapsed'></i>
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div> <!-- product details -->
+  </div> <!-- content -->
 
 
   <script type='text/javascript' src='./main.js'></script>
